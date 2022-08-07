@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-#import osimport dj_database_url
+import osimport dj_database_url
 if os.path.isfile('env.py'):
    import env
 
@@ -28,7 +28,8 @@ SECRET_KEY = 'test password'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['freebizblog.heroku.com', 'localhost' ]
+
 
 
 # Application definition
@@ -89,9 +90,9 @@ WSGI_APPLICATION = 'freebiz.wsgi.application'
 
 
 
-DATABAS = {
-    'default': dj_database_url.parse(os.parse(os.environ.get('DATABASE_URL')))
-}
+#DATABAS = {
+ #   'default': dj_database_url.parse(os.parse(os.environ.get('DATABASE_URL')))
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
