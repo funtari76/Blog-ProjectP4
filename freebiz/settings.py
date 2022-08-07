@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = ('test password')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,6 +83,9 @@ WSGI_APPLICATION = 'freebiz.wsgi.application'
    #     'NAME': BASE_DIR / 'db.sqlite3',
  #   }
 #}
+
+
+
 
 DATABAS = {
     'default': dj_database_url.parse(os.parse(os.environ.get('DATABASE_URL')))
